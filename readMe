@@ -1,0 +1,71 @@
+DB : TodoApp
+
+Feature : 
+    - Task with Date and Time
+    - We can Select a priority (HIGH,MEDIUM,LOW)
+    - DONE MARK 
+    - DELETE
+    - RESCHEDULE TO ANOTHER DATE
+
+- User
+    - User (NAME,LOGIN ID, PASSWORD,MOBILE,EMAIL,ACCESS,ACCESSAvailability)
+    - FREE : TODO CREATE, DONE, DELETE 
+    - PREMIUM : FREE + RESC , DELETE , FILTER 
+
+- DATABASE : combination of Collection 
+- COLLECTION  : combination of document (NOSQL) (JSON , kind of JS OBJECT)
+- DOCUMENT  : Info 
+        TODO :
+            USER :
+                {
+                    "_id" : ""
+                    "NAME" : "",
+                    "LOGINID" : "", 
+                    "PASSWORD" : "", 
+                    "MOBILE" : "",
+                    "EMAIL" : "",
+                    "ACCESS" : "",
+                    "ACCESSAvailability" : ""
+                },
+                {
+                    "_id" : ""
+                    "NAME" : "",
+                    "LOGINID" : "", 
+                    "PASSWORD" : "", 
+                    "MOBILE" : "",
+                    "EMAIL" : "",
+                    "ACCESS" : "",
+                    "ACCESSAvailability" : ""
+                },
+                {
+                    "_id" : ""
+                    "NAME" : "",
+                    "LOGINID" : "", 
+                    "PASSWORD" : "", 
+                    "MOBILE" : "",
+                    "EMAIL" : "",
+                    "ACCESS" : "",
+                    "ACCESSAvailability" : ""
+                }
+
+COLLECTION : SCHEMA DESIGN 
+
+FindOne : collectionName.findOne({filter},{projection})
+User.findOne({mobile : "1234567890"}) //OBJECT
+
+-DOCUMENT : TODO 
+    - Info
+        - {
+            _id : String,
+            USERID : String,
+            MESSAGE : String,
+            DATE : DATE,
+            isNotificationEnable : Boolean,
+            Time : DATE,
+            Priority : [HIGH,MEDIUM,LOW]
+            isDone : Boolean
+            isSkip : Boolean
+            isReschedule : Boolean
+            RescheduleAt : Date
+            RescheduleTo : Date
+        }
